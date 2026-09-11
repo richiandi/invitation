@@ -249,25 +249,10 @@ menyadari bahwa hati kami telah saling memilih, 9 bulan setelah pertemuan kami m
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                     <!-- Rekening 1 -->
-                    <div class="bg-black/40 p-5 rounded-2xl border border-blue-300/20 space-y-3">
-                        <p class="text-sm font-semibold text-blue-200 font-serif-luxury">BCA</p>
-                        <p id="rekening-1" class="text-base font-mono tracking-wider text-gray-200">1234567890</p>
-                        <p class="text-xs text-gray-400">a.n. Richi Muammar A.</p>
-                        <button id="btn-rek-1" onclick="copyRek('1234567890', 'btn-rek-1')" class="bg-blue-600/30 hover:bg-blue-600 text-blue-200 hover:text-white text-xs px-4 py-2 rounded-xl transition border border-blue-400/30 w-full">
-                            <i class="fa-regular fa-copy mr-2"></i> Salin Nomor Rekening
-                        </button>
-                    </div>
-
+                    
                     <!-- Rekening 2 -->
-                    <div class="bg-black/40 p-5 rounded-2xl border border-blue-300/20 space-y-3">
-                        <p class="text-sm font-semibold text-blue-200 font-serif-luxury">Mandiri</p>
-                        <p id="rekening-2" class="text-base font-mono tracking-wider text-gray-200">0987654321</p>
-                        <p class="text-xs text-gray-400">a.n. Bellatrix Vega A.</p>
-                        <button id="btn-rek-2" onclick="copyRek('0987654321', 'btn-rek-2')" class="bg-blue-600/30 hover:bg-blue-600 text-blue-200 hover:text-white text-xs px-4 py-2 rounded-xl transition border border-blue-400/30 w-full">
-                            <i class="fa-regular fa-copy mr-2"></i> Salin Nomor Rekening
-                        </button>
-                    </div>
-                </div>
+                    
+                
             </div>
 
             <!-- Footer Akhir -->
@@ -396,17 +381,6 @@ menyadari bahwa hati kami telah saling memilih, 9 bulan setelah pertemuan kami m
             document.getElementById("seconds").innerText = Math.ceil((distance % (1000 * 60)) / 1000);
         }, 1000);
 
-        // Fitur Salin Rekening
-        function copyRek(text, btnId) {
-            navigator.clipboard.writeText(text);
-            const btn = document.getElementById(btnId);
-            const originalText = btn.innerText;
-            btn.innerText = "Berhasil Disalin!";
-            btn.classList.add("bg-blue-600", "text-white");
-            setTimeout(() => {
-                btn.innerText = originalText;
-                btn.classList.remove("bg-blue-600", "text-white");
-            }, 2000);
         }
     </script>
 </body>
