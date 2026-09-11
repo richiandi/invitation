@@ -243,16 +243,17 @@ menyadari bahwa hati kami telah saling memilih, 9 bulan setelah pertemuan kami m
                 <div class="space-y-2">
                     <h3 class="font-script text-3xl text-blue-100">Amplop Digital</h3>
                     <p class="text-xs text-gray-300 max-w-md mx-auto leading-relaxed">
-                        Doa restu Anda merupakan karunia terindah bagi kami. Namun jika Anda ingin mengirimkan tanda kasih, dapat melalui nomor rekening di bawah ini:
+                        Mohon Doa & Restu Anda. Doa terbaik karunia terindah bagi kami.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                     <!-- Rekening 1 -->
                     
+
                     <!-- Rekening 2 -->
                     
-                
+                </div>
             </div>
 
             <!-- Footer Akhir -->
@@ -381,6 +382,17 @@ menyadari bahwa hati kami telah saling memilih, 9 bulan setelah pertemuan kami m
             document.getElementById("seconds").innerText = Math.ceil((distance % (1000 * 60)) / 1000);
         }, 1000);
 
+        // Fitur Salin Rekening
+        function copyRek(text, btnId) {
+            navigator.clipboard.writeText(text);
+            const btn = document.getElementById(btnId);
+            const originalText = btn.innerText;
+            btn.innerText = "Berhasil Disalin!";
+            btn.classList.add("bg-blue-600", "text-white");
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.remove("bg-blue-600", "text-white");
+            }, 2000);
         }
     </script>
 </body>
